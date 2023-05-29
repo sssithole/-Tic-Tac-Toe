@@ -1,0 +1,39 @@
+           ┌─────────────────────┐
+           │         Main        │
+           └─────────────────────┘
+                      │
+                 creates/uses
+                      │
+           ┌─────────────────────┐
+           │        Player       │
+           └─────────────────────┘
+                 │           │
+           creates    uses/creates
+                 │           │
+           ┌─────────────────────┐
+           │         Move        │
+           └─────────────────────┘
+                      │
+                 creates/uses
+                      │
+           ┌─────────────────────┐
+           │        Board        │
+           └─────────────────────┘
+                 │           │
+           uses       creates/uses
+                 │           │
+      ┌─────────────────────┐
+      │  TicTacToeStrategy  │
+      └─────────────────────┘
+
+In this diagram, Main is the entry point of the program and creates instances of the other classes. Main interacts with Player to create players for the game.
+
+The Player class represents a player and interacts with Move to make moves during the game. It can also communicate with Board to check the current state of the board.
+
+The Move class represents a move made by a player and is created and used by the Player class.
+
+The Board class manages the game board and can be used by both Player and TicTacToeStrategy to check the current state of the board.
+
+The TicTacToeStrategy class represents a strategy for playing Tic Tac Toe. It uses the Board class to analyze the current state of the board and make informed decisions about the next move.
+
+This diagram demonstrates the relationships between the classes and how they interact with each other to implement the game logic.
